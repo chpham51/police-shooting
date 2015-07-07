@@ -2,22 +2,34 @@
 
 <html>
   <head>
+    <meta name="author" content="Christy Pham">
+    <meta name="description" content="Interactive Map">
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
     <title>Police Shootings</title>
-    <!-- Get the leaflet.js library and stylesheet -->
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     <link rel="stylesheet" href="css/main.css"/>
   </head>
-
   <body>
-    <div id="container" style="width:500px; height:500px;"></div>
+    <header>
+      <h3>Crowdsourced Police Shootings</h3>
+    </header>
+    <div id="container" style="width:500px; height:480px;"></div>
     <script>
       drawMap();
-      
-    	// This is where you should execute your drawMap function // 
-
     </script>
+    <p>This is an interactive map showing crowdsourced police shootings data that was collected by Deadspin last fall. Their data consist of more than 2000 incidents of police-involved shootings in the US from 2011-2014. Learn more <a href="http://regressing.deadspin.com/deadspin-police-shooting-database-update-were-still-go-1627414202/">here.</a></p>
+    <div id="key">
+      <h3> Map Key </h3>
+      <text id="white">White Race</text><br>
+      <text id="black">Black or African American Race</text><br>
+      <text id="asian">Asian Race</text><br>
+      <text id="unknown">Unknown Race</text><br>
+      <text id="hispanic">Hispanic or Latino Origin</text><br><br>
+      <text> Opaque Markers = Unarmed<br> 
+            Transparent Markers = Armed<br> 
+            Half Transparent Markers = Unknown Unarmed or Armed</text>
+    </div>
   </body>
 </html>
